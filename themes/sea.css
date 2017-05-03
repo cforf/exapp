@@ -18,7 +18,23 @@ body {
     height: 200px;
 }
 
-#header h1 {}
+img#logo {
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin: 20px 20px 20px -2px;
+}
+
+img#name_app{
+    float: left;
+    width: 440px;
+    height: 90px;
+    margin-top: 39px;
+}
+
+#header p {
+    float: left;
+}
 
 #content {
     overflow: auto;

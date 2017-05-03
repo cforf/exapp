@@ -1,3 +1,9 @@
+@font-face {
+    /*font-family: 'titan';
+    src: url('../fonts/titanone-regular.eot');
+    src: url('../fonts/titanone-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/titanone-regular.woff') format('woff'), url('../fonts/titanone-regular.ttf') format('truetype'), url('../fonts/titanone-regular.svg#webfont') format('svg');*/
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,15 +17,34 @@ body {
 }
 
 #container {
-    /*    background-color: #5b6c80;*/
+    //background-color: #5b6c80;
 }
 
 #header {
-    height: 200px;
-    background-image: url(../images/logo_ExApp.png);
+    height: 250px;
 }
 
-#header h1 {}
+img#logo {
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin: 20px 20px 20px -2px;
+}
+
+img#name_app {
+    float: left;
+    width: 440px;
+    height: 90px;
+    margin-top: 39px;
+}
+
+#header p {
+    float: left;
+    font-family: 'DejaVu Sans Mono';
+    font-size: 16px;
+    //text-align: justify;
+    margin-left: 3px;
+}
 
 #content {
     overflow: auto;
