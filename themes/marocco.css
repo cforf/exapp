@@ -1,7 +1,17 @@
 @font-face {
-    /*font-family: 'titan';
-    src: url('../fonts/titanone-regular.eot');
-    src: url('../fonts/titanone-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/titanone-regular.woff') format('woff'), url('../fonts/titanone-regular.ttf') format('truetype'), url('../fonts/titanone-regular.svg#webfont') format('svg');*/
+    font-family: 'dejavu';
+    src: url('../fonts/dejavusansmono.eot');
+    src: url('../fonts/dejavusansmono.eot?#iefix') format('embedded-opentype'), url('../fonts/dejavusansmono.woff') format('woff'), url('../fonts/dejavusansmono.ttf') format('truetype'), url('../fonts/dejavusansmono.svg#dejavu_sans_monobook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fixedsys_excelsior';
+    src: url('../fonts/fsex300.eot');
+    src: url('fsex300.eot?#iefix') format('embedded-opentype'), url('../fonts/fsex300.woff') format('woff'), url('../fonts/fsex300.ttf') format('truetype'), url('../fonts/fsex300.svg#fixedsys_excelsior') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 * {
@@ -12,46 +22,75 @@
 body {
     background-color: #7B4F37;
     color: #fef4cc;
-    width: 640px;
+    width: 610px;
     margin: 0 auto;
 }
 
 #container {
-    //background-color: #5b6c80;
+    // background-color: #5b6c80;
 }
 
 #header {
-    height: 250px;
+    height: 220px;
+    //background-color: darkgray;
 }
 
 img#logo {
     float: left;
     width: 150px;
     height: 150px;
-    margin: 20px 20px 20px -2px;
+    margin: 20px 28px 20px -2px;
 }
 
 img#name_app {
     float: left;
-    width: 440px;
+    width: 434px;
     height: 90px;
     margin-top: 39px;
 }
 
 #header p {
     float: left;
-    font-family: 'DejaVu Sans Mono';
+    font-family: dejavu;
     font-size: 16px;
-    //text-align: justify;
-    margin-left: 3px;
+    letter-spacing: 0.02em;
+    margin: 5px 0 0 3px;
 }
 
 #content {
     overflow: auto;
     height: 100%;
+    //width: 600px;
     border: 2px solid #ff7800;
     background-color: #0a6b6d;
     border-radius: 8px;
+    margin-top: 20px;
+    font-family: fixedsys_excelsior;
+    font-size: 22px;
+}
+
+#sol1,
+#sol2,
+#sol3,
+#sol4 {
+    padding: 10px 10px 60px 10px;
+}
+
+#sol1 img,
+#sol2 img,
+#sol3 img,
+#sol4 img {
+    float: right;
+    margin: 4px 3px 0 0;
+    display: none;
+}
+
+
+#sol1:hover,
+#sol2:hover,
+#sol3:hover,
+#sol4:hover {
+    background-color: #025c5f;
 }
 
 #feature,
@@ -61,14 +100,6 @@ img#name_app {
 }
 
 #footer {
+    font-family: dejavu;
     text-align: center;
-}
-
-.column1,
-.column2,
-.column3 {
-    //background-color: #efefef;
-    width: 190px;
-    float: left;
-    margin: 10px;
 }
