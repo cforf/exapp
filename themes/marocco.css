@@ -27,7 +27,7 @@ body {
 }
 
 #container {
-    // background-color: #5b6c80;
+     //background-color: #5b6c80;
 }
 
 #header {
@@ -60,11 +60,9 @@ img#name_app {
 #content {
     overflow: auto;
     height: 100%;
-    //width: 600px;
     border: 2px solid #ff7800;
     background-color: #0a6b6d;
     border-radius: 8px;
-    margin-top: 20px;
     font-family: fixedsys_excelsior;
     font-size: 22px;
 }

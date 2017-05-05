@@ -59,11 +59,9 @@ img#name_app {
 #content {
     overflow: auto;
     height: 100%;
-    //width: 600px;
     border: 2px solid #368edb;
     background-color: #536373;
     border-radius: 8px;
-    margin-top: 20px;
     font-family: fixedsys_excelsior;
     font-size: 22px;
 }
