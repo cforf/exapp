@@ -73,10 +73,10 @@ img#name_app {
     padding: 10px 10px 60px 10px;
 }
 
-#sol1 img,
-#sol2 img,
-#sol3 img,
-#sol4 img {
+#sol1 img.menu,
+#sol2 img.menu,
+#sol3 img.menu,
+#sol4 img.menu {
     float: right;
     margin: 4px 3px 0 0;
     display: none;
@@ -87,6 +87,22 @@ img#name_app {
 #sol3:hover,
 #sol4:hover {
     background-color: #44586d;
+}
+
+ul li {
+    display: inline-block;
+    padding-top: 7px;
+    float: left;
+}
+
+ul li img[alt="php icon"] {
+    padding-top: 8px;
+    padding-left: 2px;
+}
+
+ul li img[alt="mysql icon"] {
+    padding-left: 4px;
+    padding-top: 4px;
 }
 
 #feature,
