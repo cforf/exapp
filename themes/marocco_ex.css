@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #7B4F37;
+    color: #fef4cc;
+    width: 610px;
+    margin: 0 auto;
+}
+
+#container {
+     //background-color: #5b6c80;
+}
+
+#header {
+    height: 220px;
+    //background-color: darkgray;
+}
+
+img#logo {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 0px auto;
+}
+
+img#name_app {
+    display: block;
+    width: 217px;
+    height: 45px;
+    margin: 0px auto;
+    margin-top: 10px;
+}
+
+#header p {
+    font-family: dejavu;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    margin: 5px 0 0 3px;
+}
+
+#content {
+    overflow: auto;
+    height: 100%;
+    border: 2px solid #ff7800;
+    background-color: #0a6b6d;
+    border-radius: 8px;
+    font-family: fixedsys_excelsior;
+    font-size: 22px;
+}
+
+#feature,
+#footer {
+    padding: 10px;
+    margin: 10px;
+}
+
+#footer {
+    font-family: dejavu;
+    text-align: center;
+}

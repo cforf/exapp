@@ -25,10 +25,10 @@ var menu = (function () {
 
         switch (item) {
             case 'sol1':
-                location = "first.html";
+                location = "example1.html";
                 break;
             case 'sol2':
-                location = "second.html";
+                location = "example2.html";
                 break;
         }
 
