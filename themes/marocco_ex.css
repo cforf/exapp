@@ -14,7 +14,7 @@ body {
      //background-color: #5b6c80;
 }
 
-#header {
+header {
     height: 220px;
     //background-color: darkgray;
 }
@@ -52,12 +52,12 @@ img#name_app {
 }
 
 #feature,
-#footer {
+footer {
     padding: 10px;
     margin: 10px;
 }
 
-#footer {
+footer {
     font-family: dejavu;
     text-align: center;
 }
