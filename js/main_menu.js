@@ -5,6 +5,7 @@ var menu = (function () {
 
     function menuOver(e) {
         e.target.getElementsByTagName('img')[0].style.display = 'inline';
+        e.target.style.cursor = 'pointer';
     }
 
     function menuOut(e) {
@@ -13,12 +14,22 @@ var menu = (function () {
 
     function menuClick(e) {
         var item;
+
         if (e.target.tagName === 'DIV') {
-            //console.log('- click -' + );
             item = e.target.getAttribute('id');
         } else {
-            //console.log(e.target.parentNode.getAttribute('id'));
-            item = e.target.parentNode.getAttribute('id');
+            console.log('inside div');
+
+            var elem = e.target;
+
+            do {
+                elem = elem.parentNode;
+                console.log(elem.tagName);
+            } while (elem.tagName != 'DIV');
+
+            //console.log('elem = ' + elem);
+
+            item = elem.getAttribute('id');
         }
 
         console.log(item);
@@ -30,14 +41,16 @@ var menu = (function () {
             case 'sol2':
                 location = "example2.html";
                 break;
+            case 'sol3':
+                location = "example3.html";
+                break;
         }
-
     }
 
     for (var i = 0; i < menuItems.length; i++) {
         menuItems[i].addEventListener('mouseenter', menuOver);
         menuItems[i].addEventListener('mouseleave', menuOut);
-        menuItems[i].addEventListener('click', menuClick, false);
+        menuItems[i].addEventListener('click', menuClick);
     }
 
 
