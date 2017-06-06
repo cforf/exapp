@@ -18,10 +18,16 @@
 
 
     <div id="content">
-        <section>
-            <form action="">
-
+        <section class="input">
+            <form action="handler.php" method="post">
+            <p><input type="date" name="date_input" min="2016-11-01"></p>
+            <p><input type="number" name="number_data" min="0"></p>
+            <p><button>ADD</button></p>
             </form>
+        </section>
+        <section class="show">
+
+            displaying data
         </section>
     </div>
 
@@ -29,6 +35,8 @@
     <footer>
         <p>&copy; 2017 cforf</p>
     </footer>
+
+
 </body>
 
 </html>

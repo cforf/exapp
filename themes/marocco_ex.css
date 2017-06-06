@@ -10,10 +10,6 @@ body {
     margin: 0 auto;
 }
 
-#container {
-     //background-color: #5b6c80;
-}
-
 header {
     height: 220px;
     //background-color: darkgray;
@@ -34,7 +30,7 @@ img#name_app {
     margin-top: 10px;
 }
 
-#header p {
+header p {
     font-family: dejavu;
     font-size: 16px;
     letter-spacing: 0.02em;
@@ -51,13 +47,9 @@ img#name_app {
     font-size: 22px;
 }
 
-#feature,
 footer {
     padding: 10px;
     margin: 10px;
-}
-
-footer {
     font-family: dejavu;
     text-align: center;
 }
