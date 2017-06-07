@@ -47,6 +47,29 @@ header p {
     font-size: 22px;
 }
 
+input{
+    color: #333129;
+    font-family: dejavu;
+    font-size: 46px;
+    //border: 2px solid #ff7800;
+    background-color: #fef4cc;
+    border-radius: 5px;
+    width: 10;
+    margin: 10px;
+}
+
+button{
+    color: #fef4cc;
+    background-color: #ff7800;
+    border: 2px solid #fef4cc;
+    border-radius: 5px;
+    width: 100px;
+    height: 60px;
+    font-family: dejavu;
+    font-size: 42px;
+    //padding-top: -15px;
+}
+
 footer {
     padding: 10px;
     margin: 10px;
