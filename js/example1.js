@@ -7,6 +7,7 @@ var example1 = (function () {
 
     var numField = document.getElementById('nums');
 
+    var btnAdd = document.getElementById('save_data');
 
 
     console.log(dateField.getAttribute('value'));
@@ -25,23 +26,33 @@ var example1 = (function () {
         mm = '0' + mm
     }
 
-    //today = mm + '-' + dd + '-' + yyyy;
-
     /*if (isFirefox) {
         today = dd + '.' + mm + '.' + yyyy;
     } else {
         today = yyyy + '-' + mm + '-' + dd;
     }*/
 
-    today = dd + '.' + mm + '.' + yyyy;
+
+    today = today = yyyy + '-' + mm + '-' + dd;
 
     dateField.setAttribute('value', today);
 
     console.log(dateField.getAttribute('value'));
 
 
+    //
 
-    numField.addEventListener('focus', function () {
-        numField.style.fontSize = "2em";
+    btnAdd.addEventListener('mouseenter', function () {
+        this.style.cursor = 'pointer';
+        this.style.boxShadow = '0px 8px 5px rgba(0, 0, 0, .3)';
     });
+
+    btnAdd.addEventListener('mouseout', function () {
+        this.style.boxShadow = 'none';
+    });
+
+    btnAdd.addEventListener('mousedown', function(){
+        this.style.boxShadow = 'none';
+    });
+
 })();

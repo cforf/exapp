@@ -48,21 +48,21 @@ header p {
     border-radius: 8px;
     font-family: fixedsys_excelsior;
     font-size: 1em;
-    margin-top: 25px;
+    margin-top: 40px;
     padding: 15px;
 }
 
 input {
     color: #333129;
     font-family: dejavu;
-    font-size: 2em;
+    font-size: 1.8em;
     background-color: #fef4cc;
     display: block;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     width: 320px;
-    padding: 8px 0px 5px;
+    padding: 8px 5px 5px;
     border: none;
     border-style color;
     border-radius: 6px;
@@ -72,29 +72,28 @@ input {
     -webkit-box-shadow: inset 0px 3px 3px -1px rgba(0, 0, 0, .8);
     -moz-box-shadow: inset 0px 3px 3px -1px rgba(0, 0, 0, .8);
     -webkit-box-shadow: inset 0px 3px 3px -1px rgba(0, 0, 0, .8);
-    margin: 25px auto;
+    margin: 20px auto;
     border-bottom: 2px solid #b19789;
     text-align: center;
-    width: 220px;
+    width: 240px;
 }
 
 input#date {
     letter-spacing: -.1em;
 }
 
-input#nums{
+input#nums {
     letter-spacing: -.05em;
 }
 
 input[type=submit] {
-    //display: block;
     box-shadow: none;
     color: #fef4cc;
     background-color: #0a6b6d;
     border: 2px solid #ff7800;
     border-radius: 8px;
     font-family: dejavu;
-    font-size: 2em;
+    font-size: 1.8em;
     margin: 0 auto;
 }
 
