@@ -9,6 +9,8 @@ var example1 = (function () {
 
     var btnAdd = document.getElementById('save_data');
 
+    var showSection = document.querySelector('.show');
+
 
     console.log(dateField.getAttribute('value'));
 
@@ -43,16 +45,22 @@ var example1 = (function () {
     //
 
     btnAdd.addEventListener('mouseenter', function () {
+        this.style.marginTop = '-5px';
         this.style.cursor = 'pointer';
-        this.style.boxShadow = '0px 8px 5px rgba(0, 0, 0, .3)';
+        this.style.boxShadow = '0px 8px 2px rgba(0, 0, 0, .25)';
+        showSection.style.marginTop='45px';
     });
 
     btnAdd.addEventListener('mouseout', function () {
         this.style.boxShadow = 'none';
+        this.style.marginTop = '0px';
+        showSection.style.marginTop='40px';
     });
 
-    btnAdd.addEventListener('mousedown', function(){
+    btnAdd.addEventListener('click', function () {
         this.style.boxShadow = 'none';
+        this.style.marginTop = '0px';
+        showSection.style.marginTop='40px';
     });
 
 })();
