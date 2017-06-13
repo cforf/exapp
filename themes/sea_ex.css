@@ -53,7 +53,7 @@ header p {
 }
 
 input {
-    color: #333129;
+    color: #363636;
     font-family: dejavu;
     font-size: 1.8em;
     background-color: #fef4cc;
@@ -88,9 +88,9 @@ input#nums {
 
 input[type=submit] {
     box-shadow: none;
-    color: #fef4cc;
-    background-color: #536373;
-    border: 2px solid #368edb;
+    color: #363636;
+    background-color: #ff7800;
+    border: 2px solid #363636;
     border-radius: 8px;
     font-family: dejavu;
     font-size: 1.8em;

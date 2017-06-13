@@ -88,9 +88,9 @@ input#nums {
 
 input[type=submit] {
     box-shadow: none;
-    color: #fef4cc;
-    background-color: #0a6b6d;
-    border: 2px solid #ff7800;
+    color: #333129;
+    background-color: #ffc800;
+    border: 2px solid #333129;
     border-radius: 8px;
     font-family: dejavu;
     font-size: 1.8em;
