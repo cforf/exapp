@@ -11,6 +11,8 @@ var example1 = (function () {
 
     var showSection = document.querySelector('.show');
 
+    var formData = document.getElementById('form');
+
 
     console.log(dateField.getAttribute('value'));
 
@@ -41,26 +43,38 @@ var example1 = (function () {
 
     console.log(dateField.getAttribute('value'));
 
+    function addData() {
 
-    //
+        if(formData.checkValidity()){
+            console.log('valid data');
+
+            //send data
+        }else{
+            console.log('wrong data');
+        }
+    }
+
+    //btn ADD
 
     btnAdd.addEventListener('mouseenter', function () {
         this.style.marginTop = '-5px';
         this.style.cursor = 'pointer';
         this.style.boxShadow = '0px 8px 2px rgba(0, 0, 0, .25)';
-        showSection.style.marginTop='45px';
+        showSection.style.marginTop = '45px';
     });
 
     btnAdd.addEventListener('mouseout', function () {
         this.style.boxShadow = 'none';
         this.style.marginTop = '0px';
-        showSection.style.marginTop='40px';
+        showSection.style.marginTop = '40px';
     });
 
-    btnAdd.addEventListener('click', function () {
+    btnAdd.addEventListener('click', function(){
         this.style.boxShadow = 'none';
         this.style.marginTop = '0px';
-        showSection.style.marginTop='40px';
+        showSection.style.marginTop = '40px';
+
+        addData();
     });
 
 })();
