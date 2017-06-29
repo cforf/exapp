@@ -86,6 +86,13 @@ input#nums {
     letter-spacing: -.05em;
 }
 
+input:invalid {
+    background-color: #f97171;
+}
+input:valid{
+    background-color: #fef4cc;
+}
+
 input[type=submit] {
     box-shadow: none;
     color: #333129;
@@ -95,6 +102,7 @@ input[type=submit] {
     font-family: dejavu;
     font-size: 1.8em;
 }
+
 
 footer {
     padding: 10px;

@@ -43,18 +43,19 @@ var example1 = (function () {
 
     console.log(dateField.getAttribute('value'));
 
+
+
+    //btn ADD
     function addData() {
 
-        if(formData.checkValidity()){
+        if (formData.checkValidity()) {
             console.log('valid data');
 
             //send data
-        }else{
+        } else {
             console.log('wrong data');
         }
     }
-
-    //btn ADD
 
     btnAdd.addEventListener('mouseenter', function () {
         this.style.marginTop = '-5px';
@@ -69,12 +70,12 @@ var example1 = (function () {
         showSection.style.marginTop = '40px';
     });
 
-    btnAdd.addEventListener('click', function(){
+    btnAdd.addEventListener('mousedown', function () {
         this.style.boxShadow = 'none';
         this.style.marginTop = '0px';
         showSection.style.marginTop = '40px';
-
-        addData();
     });
+
+    btnAdd.addEventListener('click', addData);
 
 })();
