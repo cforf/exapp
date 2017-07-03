@@ -16,6 +16,10 @@ var example1 = (function () {
 
     console.log(dateField.getAttribute('value'));
 
+    //console.log(numField.getAttribute('id'));
+    //numField.setAttribute("id", "numsval");
+    //console.log(numField.getAttribute('id'));
+
 
     var today = new Date();
     var dd = today.getDate();
@@ -57,6 +61,11 @@ var example1 = (function () {
         }
     }
 
+    //preparing for input Data
+    function prepareInput() {
+        numField.style.backgroundColor = '#fef4cc';
+    }
+
     btnAdd.addEventListener('mouseenter', function () {
         this.style.marginTop = '-5px';
         this.style.cursor = 'pointer';
@@ -76,6 +85,11 @@ var example1 = (function () {
         showSection.style.marginTop = '40px';
     });
 
+
+    document.addEventListener('DOMContentLoaded', prepareInput);
     btnAdd.addEventListener('click', addData);
+    numField.addEventListener('keypress', function () {
+        numField.style.backgroundColor = '';
+    });
 
 })();
