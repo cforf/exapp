@@ -58,19 +58,19 @@ var example1 = (function () {
             this.style.marginTop = '-5px';
             this.style.cursor = 'pointer';
             this.style.boxShadow = '0px 8px 2px rgba(0, 0, 0, .25)';
-            showSection.style.marginTop = '45px';
+            showSection.style.marginTop = '35px';
         });
 
         btnAdd.addEventListener('mouseout', function () {
             this.style.boxShadow = 'none';
             this.style.marginTop = '0px';
-            showSection.style.marginTop = '40px';
+            showSection.style.marginTop = '30px';
         });
 
         btnAdd.addEventListener('mousedown', function () {
             this.style.boxShadow = 'none';
             this.style.marginTop = '0px';
-            showSection.style.marginTop = '40px';
+            showSection.style.marginTop = '30px';
         });
 
         btnAdd.addEventListener('click', addData);
