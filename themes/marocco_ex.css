@@ -40,16 +40,17 @@ header p {
     margin-top: 25px;
 }
 
-.show {
+#show_data {
     overflow: auto;
     height: 100%;
     border: 2px solid #ff7800;
     background-color: #0a6b6d;
     border-radius: 8px;
     font-family: fixedsys_excelsior;
-    font-size: 1em;
-    margin-top: 40px;
-    padding: 15px;
+    font-size: 1.4em;
+    padding: 13px;
+    text-align: center;
+    margin-top: 30px;
 }
 
 input {
@@ -72,7 +73,7 @@ input {
     -webkit-box-shadow: inset 0px 3px 3px -1px rgba(0, 0, 0, .8);
     -moz-box-shadow: inset 0px 3px 3px -1px rgba(0, 0, 0, .8);
     -webkit-box-shadow: inset 0px 3px 3px -1px rgba(0, 0, 0, .8);
-    margin: 20px auto;
+    margin: 13px auto;
     border-bottom: 2px solid #b19789;
     text-align: center;
     width: 240px;
@@ -89,7 +90,8 @@ input#nums {
 input:invalid {
     background-color: #f97171;
 }
-input:valid{
+
+input:valid {
     background-color: #fef4cc;
 }
 
@@ -102,7 +104,6 @@ input[type=submit] {
     font-family: dejavu;
     font-size: 1.8em;
 }
-
 
 footer {
     padding: 10px;
