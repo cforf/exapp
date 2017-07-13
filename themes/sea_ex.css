@@ -40,9 +40,11 @@ header p {
     margin-top: 25px;
 }
 
+
 #show_data {
     overflow: auto;
     height: 100%;
+    min-height: 196px;
     border: 2px solid #368edb;
     background-color: #536373;
     border-radius: 8px;
@@ -51,6 +53,14 @@ header p {
     padding: 13px;
     text-align: center;
     margin-top: 30px;
+}
+
+#show_data img {
+    height: 160px;
+    width: 160px;
+    display: block;
+    margin: 0px auto;
+    padding-top: 18px;
 }
 
 input {
@@ -65,6 +75,7 @@ input {
     width: 320px;
     padding: 8px 5px 5px;
     border: none;
+    border-style color;
     border-radius: 6px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -72,7 +83,7 @@ input {
     -webkit-box-shadow: inset 0px 3px 3px -1px rgba(0, 0, 0, .8);
     -moz-box-shadow: inset 0px 3px 3px -1px rgba(0, 0, 0, .8);
     -webkit-box-shadow: inset 0px 3px 3px -1px rgba(0, 0, 0, .8);
-    margin: 20px auto;
+    margin: 13px auto;
     border-bottom: 2px solid #368edb;
     text-align: center;
     width: 240px;
@@ -102,7 +113,7 @@ input[type=submit] {
     border-radius: 8px;
     font-family: dejavu;
     font-size: 1.8em;
-    margin: 0 auto;
+/*    margin: 0 auto;*/
 }
 
 footer {
