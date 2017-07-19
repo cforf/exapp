@@ -99,7 +99,8 @@ input:invalid {
     background-color: #f97171;
 }
 
-input:valid, #before_input {
+input:valid,
+input.before_input {
     background-color: #fef4cc;
 }
 

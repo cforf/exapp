@@ -33,10 +33,10 @@ var example1 = (function () {
             dateField.setAttribute('value', today);
 
             console.log(dateField.getAttribute('value'));
-            numField.setAttribute('id', 'before_input');
+            numField.setAttribute('class', 'before_input');
 
-            createRequest();
-            getDataAjax(showSection);
+           // createRequest();
+           // getDataAjax(showSection);
         })();
 
         /*if (isFirefox) {
@@ -59,8 +59,8 @@ var example1 = (function () {
 
         function clearFields() {
             numField.value = '';
-            
-            numField.setAttribute('id', 'before_input')
+
+            numField.setAttribute('class', 'before_input')
             console.info('num field clear!');
         }
 
@@ -85,13 +85,13 @@ var example1 = (function () {
 
         // btnAdd.addEventListener('click', addData);
         numField.addEventListener('keypress', function () {
-            numField.style.backgroundColor = '';
+            numField.removeAttribute('class');            
         });
 
         formData.addEventListener('submit', function (e) {
             e.preventDefault();//Prevent the default action(submit)
             //console.info(e.target);
-            submitToDB(e, showSection);
+           // submitToDB(e, showSection);
             clearFields();
         });
 
