@@ -6,8 +6,11 @@ var example1 = (function () {
         var dateField = document.getElementById('date');
         var numField = document.getElementById('nums');
         var btnAdd = document.getElementById('save_data');
-        var showSection = document.querySelector('.show');
+        var showSection = document.getElementById('show_data');
         var formData = document.getElementById('form');
+
+        //formData.style.backgroundColor = red;
+        //console.log(formData);
 
         var today = new Date();
         var dd = today.getDate();
@@ -19,21 +22,21 @@ var example1 = (function () {
             //working with date-->
             console.log(dateField.getAttribute('value'));
             if (dd < 10) {
-                dd = '0' + dd
+                dd = '0' + dd;
             }
 
             if (mm < 10) {
-                mm = '0' + mm
+                mm = '0' + mm;
             }
 
             today = today = yyyy + '-' + mm + '-' + dd;
-
             dateField.setAttribute('value', today);
 
             console.log(dateField.getAttribute('value'));
+            numField.setAttribute('id', 'before_input');
 
-
-            numField.style.backgroundColor = '#fef4cc';
+            createRequest();
+            getDataAjax(showSection);
         })();
 
         /*if (isFirefox) {
@@ -52,6 +55,13 @@ var example1 = (function () {
             } else {
                 console.log('wrong data');
             }
+        }
+
+        function clearFields() {
+            numField.value = '';
+            
+            numField.setAttribute('id', 'before_input')
+            console.info('num field clear!');
         }
 
         btnAdd.addEventListener('mouseenter', function () {
@@ -73,10 +83,18 @@ var example1 = (function () {
             showSection.style.marginTop = '30px';
         });
 
-        btnAdd.addEventListener('click', addData);
+        // btnAdd.addEventListener('click', addData);
         numField.addEventListener('keypress', function () {
             numField.style.backgroundColor = '';
         });
+
+        formData.addEventListener('submit', function (e) {
+            e.preventDefault();//Prevent the default action(submit)
+            //console.info(e.target);
+            submitToDB(e, showSection);
+            clearFields();
+        });
+
 
     }
 

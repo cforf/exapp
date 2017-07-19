@@ -99,7 +99,7 @@ input:invalid {
     background-color: #f97171;
 }
 
-input:valid {
+input:valid, #before_input {
     background-color: #fef4cc;
 }
 
@@ -112,6 +112,11 @@ input[type=submit] {
     border-radius: 8px;
     font-family: dejavu;
     font-size: 1.8em;
+}
+
+#rec:hover {
+    background-color: #025c5f;
+    border-radius: 5px;
 }
 
 footer {

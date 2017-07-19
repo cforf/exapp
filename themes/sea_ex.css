@@ -100,7 +100,7 @@ input#nums {
 input:invalid {
     background-color: #f97171;
 }
-input:valid{
+input:valid, #before_input {
     background-color: #c5dffb;
 }
 
