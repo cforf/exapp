@@ -9,41 +9,26 @@ var example1 = (function () {
         var showSection = document.getElementById('show_data');
         var formData = document.getElementById('form');
 
-        //formData.style.backgroundColor = red;
-        //console.log(formData);
-
-        var today = new Date();
-        var dd = today.getDate();
-        var mm = today.getMonth() + 1; //January is 0!
-        var yyyy = today.getFullYear();
-
         (function firstLoads() {
-
             //working with date-->
             console.log(dateField.getAttribute('value'));
-            if (dd < 10) {
-                dd = '0' + dd;
-            }
-
-            if (mm < 10) {
-                mm = '0' + mm;
-            }
-
-            today = today = yyyy + '-' + mm + '-' + dd;
-            dateField.setAttribute('value', today);
-
+            dateField.setAttribute('value', getFormatDate());
             console.log(dateField.getAttribute('value'));
             numField.setAttribute('class', 'before_input');
 
-           // createRequest();
-           // getDataAjax(showSection);
+             createRequest();
+             getDataAjax(showSection);
         })();
 
-        /*if (isFirefox) {
-            today = dd + '.' + mm + '.' + yyyy;
-        } else {
-            today = yyyy + '-' + mm + '-' + dd;
-        }*/
+        function getFormatDate() {
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth() + 1; //January is 0!            
+
+            today = today.getFullYear() + '-' + (mm < 10 ? '0' + mm : mm) + '-' + (dd < 10 ? '0' + dd : dd);
+
+            return today;
+        }
 
         //btn ADD
         function addData() {
@@ -59,9 +44,7 @@ var example1 = (function () {
 
         function clearFields() {
             numField.value = '';
-
-            numField.setAttribute('class', 'before_input')
-            console.info('num field clear!');
+            numField.setAttribute('class', 'before_input');            
         }
 
         btnAdd.addEventListener('mouseenter', function () {
@@ -85,13 +68,13 @@ var example1 = (function () {
 
         // btnAdd.addEventListener('click', addData);
         numField.addEventListener('keypress', function () {
-            numField.removeAttribute('class');            
+            numField.removeAttribute('class');
         });
 
         formData.addEventListener('submit', function (e) {
             e.preventDefault();//Prevent the default action(submit)
             //console.info(e.target);
-           // submitToDB(e, showSection);
+            // submitToDB(e, showSection);
             clearFields();
         });
 
