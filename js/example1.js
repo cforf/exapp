@@ -44,7 +44,8 @@ var example1 = (function () {
 
         function clearFields() {
             numField.value = '';
-            numField.setAttribute('class', 'before_input');            
+            numField.setAttribute('class', 'before_input');
+ 	    numField.focus();            
         }
 
         btnAdd.addEventListener('mouseenter', function () {
