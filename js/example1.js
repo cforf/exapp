@@ -16,14 +16,14 @@ var example1 = (function () {
             console.log(dateField.getAttribute('value'));
             numField.setAttribute('class', 'before_input');
 
-             createRequest();
-             getDataAjax(showSection);
+            createRequest();
+            getDataAjax(showSection);
         })();
 
         function getFormatDate() {
             var today = new Date();
             var dd = today.getDate();
-            var mm = today.getMonth() + 1; //January is 0!            
+            var mm = today.getMonth() + 1; //January is 0!
 
             today = today.getFullYear() + '-' + (mm < 10 ? '0' + mm : mm) + '-' + (dd < 10 ? '0' + dd : dd);
 
@@ -45,7 +45,7 @@ var example1 = (function () {
         function clearFields() {
             numField.value = '';
             numField.setAttribute('class', 'before_input');
- 	    numField.focus();            
+            numField.focus();
         }
 
         btnAdd.addEventListener('mouseenter', function () {
@@ -73,9 +73,9 @@ var example1 = (function () {
         });
 
         formData.addEventListener('submit', function (e) {
-            e.preventDefault();//Prevent the default action(submit)
+            e.preventDefault(); //Prevent the default action(submit)
             //console.info(e.target);
-            // submitToDB(e, showSection);
+            submitToDB(e, showSection);
             clearFields();
         });
 

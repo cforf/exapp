@@ -5,7 +5,7 @@ var linef = ' ................................ ';
 //---
 //var fd = document.getElementById('form');
 
-/*function submitToDB(e, modifiedObject) {
+function submitToDB(e, modifiedObject) {
     var subForm = e.target;
     var subData = new FormData(subForm);
     modify = modifiedObject;
@@ -21,7 +21,7 @@ var linef = ' ................................ ';
     xhttp.send(subData);
     //console.info(subForm.method);
     //return false;//oldest variant preventDefault();
-}*/
+}
 
 // fd.addEventListener('submit', function (e) {
 //     e.preventDefault();//Prevent the default action(submit)
@@ -51,12 +51,6 @@ function createRequest() {
     if (request === null) alert('Error creating request object!');
 }
 
-// if (window.XMLHttpRequest) {
-//     request = new XMLHttpRequest();
-// } else {
-//     request = new ActiveXObject("Microsoft.XMLHTTP");
-// }
-
 function getDataAjax(modifiedObject) {
     modify = modifiedObject;
     //var noCash = parseInt(Math.random() * 99999999999999999);
@@ -70,20 +64,16 @@ function getDataAjax(modifiedObject) {
 
 function theHTTPReponse() {
     if (request.readyState === 4) {
+        if (request.status === 200) {
+            //console.info(request.responseText);
+            var jcont = JSON.parse(request.responseText);
+            modify.innerHTML = '';
 
-        //setTimeout(function () {
-            if (request.status === 200) {
-                //console.info(request.responseText);
-                var jcont = JSON.parse(request.responseText);
-                modify.innerHTML = '';
-
-                for (var rec in jcont) {
-                    modify.innerHTML += '<div id="rec">' + jcont[rec][1] + linef + jcont[rec][2] + '</div>'; //'<br>';
-                }
-                //console.log(jcont);
+            for (var rec in jcont) {
+                modify.innerHTML += '<div id="rec">' + jcont[rec][1] + linef + jcont[rec][2] + '</div>'; //'<br>';
             }
-        //}, 3000);
-
+            //console.log(jcont);
+        }
     } else {
         modify.innerHTML = '<img src="images/loading.gif">';
     }
