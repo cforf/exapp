@@ -3,7 +3,6 @@ var modify; //= document.getElementById('show_data');
 var linef = ' ................................ ';
 
 //---
-//var fd = document.getElementById('form');
 
 function submitToDB(e, modifiedObject) {
     var subForm = e.target;
@@ -20,17 +19,7 @@ function submitToDB(e, modifiedObject) {
     xhttp.open(subForm.method, subForm.action, true);
     xhttp.send(subData);
     //console.info(subForm.method);
-    //return false;//oldest variant preventDefault();
 }
-
-// fd.addEventListener('submit', function (e) {
-//     e.preventDefault();//Prevent the default action(submit)
-//     //console.info(e.target);
-//     submitToDB(e);
-// });
-
-//---
-
 
 function createRequest() {
 
@@ -47,14 +36,12 @@ function createRequest() {
             }
         }
     }
-    //if (request == null) alert('Error creating request object! ' + "\n" + err.name + ":" + err.message + "\n" + err.stack);
+
     if (request === null) alert('Error creating request object!');
 }
 
 function getDataAjax(modifiedObject) {
     modify = modifiedObject;
-    //var noCash = parseInt(Math.random() * 99999999999999999);
-    //var url = "json.json";// + "?rand=" + noCash;
     var url = "query.php"; // from php
     request.open('GET', url); //true by default -  asynchronised
     request.setRequestHeader("content-type", "application/json");

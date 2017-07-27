@@ -101,7 +101,7 @@ input:invalid {
 }
 
 input:valid,
-.before_input {
+input.before_input {
     background-color: #c5dffb;
 }
 

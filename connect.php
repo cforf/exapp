@@ -14,9 +14,6 @@ try {
         $settings['username'],
         $settings['password']
     );
-   // echo 'Database connected. Again!';
-
-
 } catch (PDOException $e) {
     //Database connection failed
     echo 'Database connection failed';
