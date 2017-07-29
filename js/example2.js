@@ -1,7 +1,7 @@
 //JQuery
 $(document).ready(function () {
     //$('body').prepend('jquery works!');
-    showData();
+
     //input date
     var $dateField = $('#date');
     var $numField = $('#nums');
@@ -12,6 +12,8 @@ $(document).ready(function () {
 
     $dateField.val(getFormatDate());
     $numField.attr('class', 'before_input');
+
+    showData();
 
     function getFormatDate() {
         var today = new Date();
@@ -24,13 +26,12 @@ $(document).ready(function () {
     }
 
     function showData() {
-        //$('#output').empty();
+        $showSection.html('');
         $.ajax({
             type: 'GET',
             url: 'query.php',
             success: function (response) {
                 $.each(response, function (index) {
-
                     $showSection.append(response[index][1] + linef + response[index][2] + '<br>');
                 });
                 // console.log(response);
@@ -74,12 +75,20 @@ $(document).ready(function () {
         $(this).removeAttr('class');
     });
     $formData.on('submit', function (e) {
-        e.preventDefault(); //Prevent the default action(submit)
         //console.info(e.target);
-        // submitToDB(e, showSection);
+        $.ajax({
+            type: $(this).attr('method'),
+            url: $(this).attr('action'),
+            data: $(this).serialize(),
+            success: function () {
+                //console.log(os);
+                showData();
+            }
+        });
+
+        e.preventDefault(); //Prevent the default action(submit)
         clearFields();
     });
 
 
 });
-
