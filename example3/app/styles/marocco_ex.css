@@ -4,8 +4,8 @@
 }
 
 body {
-    background-color: #146ea6;
-    color: #cae5f4;
+    background-color: #7B4F37;
+    color: #fef4cc;
     width: 610px;
     margin: 0 auto;
 }
@@ -44,8 +44,8 @@ header p {
     overflow: auto;
     height: 100%;
     min-height: 196px;
-    border: 2px solid #368edb;
-    background-color: #536373;
+    border: 2px solid #ff7800;
+    background-color: #0a6b6d;
     border-radius: 8px;
     font-family: fixedsys_excelsior;
     font-size: 1.4em;
@@ -63,10 +63,10 @@ header p {
 }
 
 input {
-    color: #363636;
+    color: #333129;
     font-family: dejavu;
     font-size: 1.8em;
-    background-color: #c5dffb;
+    background-color: #fef4cc;
     display: block;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -82,7 +82,7 @@ input {
     -moz-box-shadow: inset 0px 3px 3px -1px rgba(0, 0, 0, .8);
     -webkit-box-shadow: inset 0px 3px 3px -1px rgba(0, 0, 0, .8);
     margin: 13px auto;
-    border-bottom: 2px solid #368edb;
+    border-bottom: 2px solid #b19789;
     text-align: center;
     width: 240px;
 }
@@ -101,19 +101,23 @@ input:invalid {
 
 input:valid,
 input.before_input {
-    background-color: #c5dffb;
+    background-color: #fef4cc;
 }
 
 input[type=submit] {
     -webkit-box-shadow: none;
     box-shadow: none;
-    color: #363636;
-    background-color: #ff7800;
-    border: 2px solid #363636;
+    color: #333129;
+    background-color: #ffc800;
+    border: 2px solid #333129;
     border-radius: 8px;
     font-family: dejavu;
     font-size: 1.8em;
-    /*    margin: 0 auto;*/
+}
+
+#rec:hover {
+    background-color: #025c5f;
+    border-radius: 5px;
 }
 
 footer {
