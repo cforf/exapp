@@ -8,5 +8,6 @@
  *
  * Main module of the application.
  */
-angular
-  .module('example3App', []);
+angular.module('example3App', []);
+
+

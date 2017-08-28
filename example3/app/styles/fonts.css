@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'dejavu';
+    src: url('../fonts/dejavusansmono.eot');
+    src: url('../fonts/dejavusansmono.eot?#iefix') format('embedded-opentype'), url('../fonts/dejavusansmono.woff') format('woff'), url('../fonts/dejavusansmono.ttf') format('truetype'), url('../fonts/dejavusansmono.svg#dejavu_sans_monobook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fixedsys_excelsior';
+    src: url('../fonts/fsex300.eot');
+    src: url('fsex300.eot?#iefix') format('embedded-opentype'), url('../fonts/fsex300.woff') format('woff'), url('../fonts/fsex300.ttf') format('truetype'), url('../fonts/fsex300.svg#fixedsys_excelsior') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

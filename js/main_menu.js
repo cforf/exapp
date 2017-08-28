@@ -42,7 +42,7 @@ var menu = (function () {
                 location = "example2.html";
                 break;
             case 'sol3':
-                location = "example3.html";
+                location = "/example3/dist/index.html";
                 break;
         }
     }
