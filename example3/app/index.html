@@ -28,9 +28,8 @@
                 <input type="submit" value="ADD" id="save_data">
             </form>
         </section>
-        <section class="show" id="show_data">
-            <div id="rec" ng-repeat="record in ajaxData">{{record}}</div>
-        </section>
+        <section class="show" id="show_data" ng-include="'views/main.html'"></section>
+
     </div>
 
 
