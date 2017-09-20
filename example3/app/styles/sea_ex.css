@@ -95,12 +95,26 @@ input#nums {
     letter-spacing: -.05em;
 }
 
+
+/*
 input:invalid {
     background-color: #f97171;
 }
 
 input:valid,
 input.before_input {
+    background-color: #c5dffb;
+}
+*/
+
+
+/* valid styles for angular.js */
+
+input.ng-invalid.ng-dirty {
+    background-color: #f97171;
+}
+
+input.ng-valid.ng-dirty {
     background-color: #c5dffb;
 }
 
