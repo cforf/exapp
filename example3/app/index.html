@@ -30,13 +30,12 @@
                         {{getError(inputForm.date_input.$error)}}
                     </div>
                 </p>
-                <p><input type="text" name="number_data" maxlength="6" ng-pattern="matchPattern" placeholder="input number" title="012345 (6 digits)" id="nums" ng-model="numData" required>
-                </p>
-                <div class="error" ng-show="showError">
-                    {{getError(inputForm.number_data.$error)}}
-                </div>
+                <p class="tooltip">                   
+                  <input type="text" name="number_data" maxlength="6" ng-pattern="matchPattern" placeholder="input number" title="012345 (6 digits)" id="nums" ng-model="numData" required>
+                  <span class="tooltiptext" ng-show="showError&&inputForm.number_data.$invalid">{{getError(inputForm.number_data.$error)}}</span>
+                </p>               
                 <input type="submit" value="ADD" ng-mouseenter="mouseEnter()" ng-mousedown="mouseDown()" ng-mouseleave="mouseLeave()" ng-style="btnStyle">
-                <button ng-click="check(inputForm.$valid, inputForm.date_input.$error)">check</button>
+                <!-- <button ng-click="check(inputForm.$valid, inputForm.date_input.$error)">check</button> -->
             </form>
         </section>
         <section class="show" id="show_data" ng-include="'views/main.html'" ng-style="sectionStyle"></section>

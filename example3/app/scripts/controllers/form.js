@@ -44,6 +44,7 @@ angular.module('example3App').controller('formCtrl', function($scope, $filter) {
     };
 
     $scope.getError = function(error) {
+      
         if (angular.isDefined(error)) {
             if (error.required) {
                 return 'Required!';
