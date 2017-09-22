@@ -2,35 +2,42 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>ExApp: Example 3</title>
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/fonts.css">
-  <link rel="stylesheet" href="styles/sea_ex.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ExApp: Example 3</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/sea_ex.css">
 </head>
 
 <body ng-app="example3App">
-<header>
-  <img src="images/name_app.png" alt="app name: ExApp" id="name_app">
-  <img src="images/logo_ExApp.png" alt="logo" id="logo">
-  <p></p>
-</header>
+    <header>
+        <img src="images/name_app.png" alt="app name: ExApp" id="name_app">
+        <img src="images/logo_ExApp.png" alt="logo" id="logo">
+        <p></p>
+    </header>
 
-<div id="content" ng-controller="MainCtrl">
-  <section class="input" ng-include="'views/form.html'"></section>
-  <section class="show" id="show_data" ng-style="sectionStyle" view-data></section>
-</div>
+    <div id="content" ng-controller="MainCtrl">
+        <section class="input" ng-include="'views/form.html'"></section>
+        <section class="show" id="show_data" ng-style="sectionStyle" view-data></section>
+    </div>
 
-<footer>
-  <p>&copy; 2017 cforf</p>
-</footer>
+    <footer>
+        <p>&copy; 2017 cforf</p>
+    </footer>
 
-<script src="bower_components/angular/angular.js"></script>
-<script src="scripts/app.js"></script>
-<script src="scripts/controllers/main.js"></script>
-<script src="scripts/controllers/form.js"></script>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/form.js"></script>
+    <!-- endbuild -->
 </body>
 
 </html>

@@ -10,14 +10,13 @@ body {
     margin: 0 auto;
 }
 
-
 #container {
-    //background-color: #5b6c80;
+    /* background-color: #5b6c80; */
 }
 
 #header {
     height: 220px;
-    //background-color: darkgray;
+    /* background-color: darkgray; */
 }
 
 img#logo {
@@ -53,7 +52,7 @@ img#name_app {
 }
 
 #sol1 {
-    //background-color:cadetblue;
+    /* background-color:cadetblue; */
 }
 
 #sol1,
@@ -101,6 +100,11 @@ ul li img[alt="mysql icon"] {
 
 ul li img[alt="jquery icon"] {
     padding-left: 4px;
+    padding-top: 8px;
+}
+
+ul li img[alt="angularjs icon"] {
+    margin-left: 3px;
     padding-top: 8px;
 }
 

@@ -73,7 +73,7 @@ img#name_app {
     background-color: #44586d;
 }
 
-ul{
+ul {
     margin-left: 20px;
 }
 
@@ -93,8 +93,13 @@ ul li img[alt="mysql icon"] {
     padding-top: 4px;
 }
 
-ul li img[alt="jquery icon"]{
+ul li img[alt="jquery icon"] {
     padding-left: 4px;
+    padding-top: 8px;
+}
+
+ul li img[alt="angularjs icon"] {
+    margin-left: 3px;
     padding-top: 8px;
 }
 
