@@ -65,4 +65,11 @@ angular.module('example3App').controller('MainCtrl', function($scope) {
     $scope.sectionStyle = {
         'margin-top': '30px'
     };
+})
+
+.directive('viewData', function () {
+  return{
+    restrict:'A',
+    templateUrl:'views/view_data.html'
+  };
 });

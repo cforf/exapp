@@ -1,0 +1,12 @@
+<form name="inputForm" ng-controller="formCtrl" ng-submit="addDataForm(inputForm.$valid)" novalidate>
+    <p class="tooltip">
+        <input type="date" name="date_input" min="2016-11-01" max="2100-01-01" id="date" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])" title="YYYY-MM-DD" maxlength="10" ng-model="dateData" required>
+        <span class="tooltiptext" ng-show="showError&&inputForm.date_input.$invalid">{{getError(inputForm.date_input.$error)}}</span>
+    </p>
+    <p class="tooltip">
+        <input type="text" name="number_data" maxlength="6" ng-pattern="matchPattern" placeholder="input number" title="012345 (6 digits)" id="nums" ng-model="numData" required>
+        <span class="tooltiptext" ng-show="showError&&inputForm.number_data.$invalid">{{getError(inputForm.number_data.$error)}}</span>
+    </p>
+    <input type="submit" value="ADD" ng-mouseenter="mouseEnter()" ng-mousedown="mouseDown()" ng-mouseleave="mouseLeave()" ng-style="btnStyle">
+    <!-- <button ng-click="check(inputForm.$valid, inputForm.date_input.$error)">check</button> -->
+</form>

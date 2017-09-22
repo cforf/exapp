@@ -110,11 +110,11 @@ input.before_input {
 
 /* valid styles for angular.js */
 
-input.ng-invalid.ng-dirty {
+input .ng-invalid .ng-dirty {
     background-color: #f97171;
 }
 
-input.ng-valid.ng-dirty {
+input .ng-valid .ng-dirty {
     background-color: #c5dffb;
 }
 
@@ -130,35 +130,42 @@ input[type=submit] {
     /*    margin: 0 auto;*/
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition: color 9999s ease-out, background-color 9999s ease-out;
+    -webkit-transition-delay: 9999s;
+}
+
 .tooltip {
-  position: relative; 
+    position: relative;
 }
 
 .tooltip .tooltiptext {
-  /* visibility: hidden; */
-  width: 180px;
-  background-color: #fbfbfb;
-  color: #363636;
-  text-align: center;
-  border-radius: 3px;
-  padding: 10px 0;
-  position: absolute;
-  z-index: 1;
-  top: 110%;
-  left:56%;
-  margin-left: -60px; 
-  box-shadow:0 0 3px #363636; 
+    width: 180px;
+    background-color: #fbfbfb;
+    color: #363636;
+    text-align: center;
+    border-radius: 3px;
+    padding: 10px 8px;
+    position: absolute;
+    z-index: 1;
+    top: 110%;
+    left: 56%;
+    margin-left: -60px;
+    box-shadow: 0 0 3px #363636;
 }
 
-.tooltip .tooltiptext::after {  
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 15%;
-  margin-left: -8px;
-  border-width: 6px;
-  border-style: solid;
-  border-color: transparent transparent #fbfbfb transparent;    
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 15%;
+    margin-left: -8px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #fbfbfb transparent;
 }
 
 footer {
