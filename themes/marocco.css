@@ -108,13 +108,11 @@ ul li img[alt="angularjs icon"] {
     padding-top: 8px;
 }
 
-#feature,
-#footer {
-    padding: 10px;
-    margin: 10px;
-}
-
 #footer {
     font-family: dejavu;
     text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 606px;
+    padding-bottom: 5px;
 }

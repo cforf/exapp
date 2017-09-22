@@ -131,8 +131,10 @@ input:-webkit-autofill:active {
 }
 
 footer {
-    padding: 10px;
-    margin: 10px;
     font-family: dejavu;
     text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 606px;
+    padding-bottom: 5px;
 }
