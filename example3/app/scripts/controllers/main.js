@@ -8,14 +8,57 @@
  * Controller of the example3App
  */
 
-var data = [2525, 2626, 2727, 2828, 2929, 3030, 3131, 3232];
+angular.module('example3App').controller('MainCtrl', function($scope, $http, $filter) {
 
-angular.module('example3App').controller('MainCtrl', function($scope) {
+    $scope.linef = ' ................................ ';
+    $scope.saveData = {};
 
-    $scope.ajaxData = data;
+    $scope.query = function() {
+        $http({
+            method: 'GET',
+            url: '../../query.php'
+        }).
+        then(function(response) {
+            $scope.status = response.status;
+            $scope.ajaxData = response.data;
+        }, function(response) {
+            $scope.ajaxData = response.data || 'Request failed';
+            $scope.status = response.status;
+        });
+    };
+
+    $scope.save = function() {
+        console.log('$scope.saveData = ' + $scope.saveData);
+
+        var data = JSON.stringify($scope.saveData);
+        /*{
+                            'date_input': $filter('date')($scope.saveData.dateData, 'yyyy-MM-dd'),
+                            'number_data': $scope.saveData.numData
+                        })*/
+
+
+        var config = {
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+            }
+        };
+
+        $http({
+            method: 'POST',
+            url: '../../add.php',
+            data: data,
+            config: config
+        }).
+        then(function(response) {
+            $scope.status = response.status;
+            $scope.ajaxData = response.data;
+        }, function(response) {
+            $scope.ajaxData = response.data || 'Request failed';
+            $scope.status = response.status;
+        });
+    };
 
     $scope.mouseEnter = function() {
-        console.log('mouse over');
 
         $scope.btnStyle = {
             'margin-top': '-5px',
@@ -29,7 +72,6 @@ angular.module('example3App').controller('MainCtrl', function($scope) {
     };
 
     $scope.mouseDown = function() {
-        console.log('mouse down');
 
         $scope.btnStyle = {
             'margin-top': '0px',
@@ -43,7 +85,6 @@ angular.module('example3App').controller('MainCtrl', function($scope) {
     };
 
     $scope.mouseLeave = function() {
-        console.log('mouse leave');
 
         $scope.btnStyle = {
             'margin-top': '0px',
@@ -65,11 +106,13 @@ angular.module('example3App').controller('MainCtrl', function($scope) {
     $scope.sectionStyle = {
         'margin-top': '30px'
     };
+
+    $scope.query();
 })
 
-.directive('viewData', function () {
-  return{
-    restrict:'A',
-    templateUrl:'views/view_data.html'
-  };
+.directive('viewData', function() {
+    return {
+        restrict: 'A',
+        templateUrl: 'views/view_data.html'
+    };
 });
