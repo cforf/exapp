@@ -10,8 +10,8 @@ function submitToDB(e, modifiedObject) {
     modify = modifiedObject;
 
     var xhttp = new XMLHttpRequest();
-    xhttp.onload = function () {
-        console.log('== success! ==');
+    xhttp.onload = function() {
+        //console.log('== success! ==');
 
         createRequest();
         getDataAjax(modify);

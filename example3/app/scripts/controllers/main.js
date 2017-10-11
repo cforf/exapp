@@ -28,30 +28,22 @@ angular.module('example3App').controller('MainCtrl', function($scope, $http, $fi
     };
 
     $scope.save = function() {
-        console.log('$scope.saveData = ' + $scope.saveData);
 
-        var data = JSON.stringify($scope.saveData);
-        /*{
-                            'date_input': $filter('date')($scope.saveData.dateData, 'yyyy-MM-dd'),
-                            'number_data': $scope.saveData.numData
-                        })*/
-
-
-        var config = {
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
-            }
-        };
+        var data = $.param({
+            'date_input': $filter('date')($scope.saveData.dateData, 'yyyy-MM-dd'),
+            'number_data': $scope.saveData.numData
+        });
 
         $http({
             method: 'POST',
             url: '../../add.php',
             data: data,
-            config: config
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;' }
         }).
         then(function(response) {
             $scope.status = response.status;
             $scope.ajaxData = response.data;
+            $scope.query();
         }, function(response) {
             $scope.ajaxData = response.data || 'Request failed';
             $scope.status = response.status;

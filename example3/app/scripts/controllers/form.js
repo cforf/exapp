@@ -11,8 +11,6 @@
 angular.module('example3App').controller('formCtrl', function($scope, $filter) {
     var stringDate = $filter('date')(new Date(), 'yyyy-MM-dd');
 
-    $scope.dataForm = [];
-
     $scope.saveData.dateData = new Date(stringDate);
 
     // $scope.date = $filter('date')($scope.date, 'yyyy-MM-dd');
@@ -23,19 +21,13 @@ angular.module('example3App').controller('formCtrl', function($scope, $filter) {
 
     $scope.addDataForm = function(isvalid) {
         if (isvalid) {
-            console.log('submit data from form ');
-            $scope.dataForm.push($filter('date')($scope.saveData.dateData, 'yyyy-MM-dd'), $scope.saveData.numData);
-            console.log($scope.dataForm);
-
-            // $scope.saveData.dateData = $filter('date')($scope.saveData.dateData, 'yyyy-MM-dd');
 
             $scope.save();
+
         } else {
             console.log('submit error -> ');
             $scope.showError = true;
         }
-        console.log('submit -> ');
-        //clear fields-->
     };
 
     $scope.check = function(valid, w) {
