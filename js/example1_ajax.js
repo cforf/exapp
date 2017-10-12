@@ -42,7 +42,7 @@ function createRequest() {
 
 function getDataAjax(modifiedObject) {
     modify = modifiedObject;
-    var url = "query.php"; // from php
+    var url = "query.php";
     request.open('GET', url); //true by default -  asynchronised
     request.setRequestHeader("content-type", "application/json");
     request.onreadystatechange = theHTTPReponse;
@@ -57,7 +57,7 @@ function theHTTPReponse() {
             modify.innerHTML = '';
 
             for (var rec in jcont) {
-                modify.innerHTML += '<div id="rec">' + jcont[rec][1] + linef + jcont[rec][2] + '</div>'; //'<br>';
+                modify.innerHTML += '<div id="rec">' + jcont[rec][1] + linef + jcont[rec][2] + '</div>';
             }
             //console.log(jcont);
         }

@@ -12,10 +12,8 @@ angular.module('example3App').controller('formCtrl', function($scope, $filter) {
     var stringDate = $filter('date')(new Date(), 'yyyy-MM-dd');
 
     $scope.saveData.dateData = new Date(stringDate);
+    $scope.clearData = angular.copy($scope.saveData);
 
-    // $scope.date = $filter('date')($scope.date, 'yyyy-MM-dd');
-    // var today = $filter('date')(new Date(), 'yyyy-MM-dd');
-    // $scope.date = $filter('date')(new Date(), 'yyyy-MM-dd'); //today;
     $scope.numData = null;
     $scope.matchPattern = new RegExp('[0-9]{6}');
 
@@ -23,6 +21,8 @@ angular.module('example3App').controller('formCtrl', function($scope, $filter) {
         if (isvalid) {
 
             $scope.save();
+            //clear form-->
+            $scope.saveData = angular.copy($scope.clearData);
 
         } else {
             console.log('submit error -> ');
@@ -30,13 +30,12 @@ angular.module('example3App').controller('formCtrl', function($scope, $filter) {
         }
     };
 
-    $scope.check = function(valid, w) {
-        // console.log($filter('date')($scope.date, 'yyyy-MM-dd'));
+    /*$scope.check = function(valid, w) {
         console.log('stringDate= ' + stringDate);
         console.log('$scope.date = ' + $scope.dateData);
         console.log('form.validate = ' + valid);
         console.log('form.date_input = ' + w);
-    };
+    };*/
 
     $scope.getError = function(error) {
 

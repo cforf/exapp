@@ -110,11 +110,11 @@ input.before_input {
 
 /* valid styles for angular.js */
 
-input .ng-invalid .ng-dirty {
+input.ng-invalid.ng-dirty {
     background-color: #f97171;
 }
 
-input .ng-valid .ng-dirty {
+input.ng-valid.ng-dirty {
     background-color: #c5dffb;
 }
 
@@ -127,7 +127,6 @@ input[type=submit] {
     border-radius: 8px;
     font-family: dejavu;
     font-size: 1.8em;
-    /*    margin: 0 auto;*/
 }
 
 input:-webkit-autofill,

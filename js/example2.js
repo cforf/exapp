@@ -1,6 +1,5 @@
 //JQuery
-$(document).ready(function () {
-    //$('body').prepend('jquery works!');
+$(document).ready(function() {
 
     //input date
     var $dateField = $('#date');
@@ -30,8 +29,8 @@ $(document).ready(function () {
         $.ajax({
             type: 'GET',
             url: 'query.php',
-            success: function (response) {
-                $.each(response, function (index) {
+            success: function(response) {
+                $.each(response, function(index) {
                     $showSection.append(response[index][1] + linef + response[index][2] + '<br>');
                 });
                 // console.log(response);
@@ -45,7 +44,7 @@ $(document).ready(function () {
     }
 
     $btnAdd.on({
-        'mouseenter': function () {
+        'mouseenter': function() {
             $(this).css({
                 'margin-top': '-5px',
                 'cursor': 'pointer',
@@ -54,7 +53,7 @@ $(document).ready(function () {
             $showSection.css('margin-top', '35px');
             // console.log('mouse over btn');
         },
-        'mouseleave': function () {
+        'mouseleave': function() {
             $(this).css({
                 'margin-top': '0px',
                 'box-shadow': 'none'
@@ -62,7 +61,7 @@ $(document).ready(function () {
             $showSection.css('margin-top', '30px');
             // console.log('mouse out btn');
         },
-        'mousedown': function () {
+        'mousedown': function() {
             $(this).css({
                 'margin-top': '0px',
                 'box-shadow': 'none'
@@ -71,16 +70,16 @@ $(document).ready(function () {
             //console.log('mouse down btn');
         }
     });
-    $numField.on('keypress', function () {
+    $numField.on('keypress', function() {
         $(this).removeAttr('class');
     });
-    $formData.on('submit', function (e) {
+    $formData.on('submit', function(e) {
         //console.info(e.target);
         $.ajax({
             type: $(this).attr('method'),
             url: $(this).attr('action'),
             data: $(this).serialize(),
-            success: function () {
+            success: function() {
                 //console.log(os);
                 showData();
             }
@@ -89,6 +88,5 @@ $(document).ready(function () {
         e.preventDefault(); //Prevent the default action(submit)
         clearFields();
     });
-
 
 });

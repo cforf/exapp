@@ -1,4 +1,4 @@
-var example1 = (function () {
+var example1 = (function() {
 
     //preparing for input Data
     function prepareInput() {
@@ -30,52 +30,45 @@ var example1 = (function () {
             return today;
         }
 
-        //btn ADD
-        function addData() {
-
-            if (formData.checkValidity()) {
-                console.log('valid data');
-
-                //send data
-            } else {
-                console.log('wrong data');
-            }
-        }
-
         function clearFields() {
             numField.value = '';
             numField.setAttribute('class', 'before_input');
             numField.focus();
         }
 
-        btnAdd.addEventListener('mouseenter', function () {
+        btnAdd.addEventListener('mouseenter', function() {
             this.style.marginTop = '-5px';
             this.style.cursor = 'pointer';
             this.style.boxShadow = '0px 8px 2px rgba(0, 0, 0, .25)';
             showSection.style.marginTop = '35px';
         });
 
-        btnAdd.addEventListener('mouseout', function () {
+        btnAdd.addEventListener('mouseout', function() {
             this.style.boxShadow = 'none';
             this.style.marginTop = '0px';
             showSection.style.marginTop = '30px';
         });
 
-        btnAdd.addEventListener('mousedown', function () {
+        btnAdd.addEventListener('mousedown', function() {
             this.style.boxShadow = 'none';
             this.style.marginTop = '0px';
             showSection.style.marginTop = '30px';
         });
 
-        // btnAdd.addEventListener('click', addData);
-        numField.addEventListener('keypress', function () {
+        numField.addEventListener('keypress', function() {
             numField.removeAttribute('class');
         });
 
-        formData.addEventListener('submit', function (e) {
+        formData.addEventListener('submit', function(e) {
             e.preventDefault(); //Prevent the default action(submit)
-            //console.info(e.target);
-            submitToDB(e, showSection);
+
+            if (formData.checkValidity()) {
+                console.log('valid data');
+                submitToDB(e, showSection);
+            } else {
+                console.log('wrong data');
+            }
+
             clearFields();
         });
 

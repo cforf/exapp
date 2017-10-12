@@ -1,5 +1,5 @@
 //creating safe namespace
-var menu = (function () {
+var menu = (function() {
 
     var menuItems = document.querySelectorAll('#content div');
 
@@ -52,6 +52,5 @@ var menu = (function () {
         menuItems[i].addEventListener('mouseleave', menuOut);
         menuItems[i].addEventListener('click', menuClick);
     }
-
 
 })();
