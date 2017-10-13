@@ -6,7 +6,7 @@ The following options are available at the moment:
    - Back-end: PHP, MySQL
 2. - Front-end: HTML, CSS, JS, JQuery, AJAX
    - Back-end: PHP, MySQL
-3. - Front-end: HTML, CSS, AngularJS(1.x)
+3. - Front-end: HTML, CSS, AngularJS (1.x)
    - Back-end: PHP, MySQL
    
 Main menu
