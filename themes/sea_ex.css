@@ -126,6 +126,37 @@ input:-webkit-autofill:active {
     -webkit-transition-delay: 9999s;
 }
 
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+    width: 180px;
+    background-color: #fbfbfb;
+    color: #363636;
+    text-align: center;
+    border-radius: 3px;
+    padding: 10px 8px;
+    position: absolute;
+    z-index: 1;
+    top: 110%;
+    left: 56%;
+    margin-left: -60px;
+    -webkit-box-shadow: 0 0 3px #363636;
+    box-shadow: 0 0 3px #363636;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 15%;
+    margin-left: -8px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #fbfbfb transparent;
+}
+
 footer {
     font-family: dejavu;
     text-align: center;

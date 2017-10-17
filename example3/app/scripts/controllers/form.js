@@ -43,9 +43,9 @@ angular.module('example3App').controller('formCtrl', function($scope, $filter) {
             if (error.required) {
                 return 'Required!';
             } else if (error.pattern) {
-                return 'Input number by pattern 012345(6 digits)';
+                return 'Input number by pattern 012345 (6 digits)';
             } else if (error.date) {
-                return 'Not a valid date! Input date by pattern YYYY-MM-DD';
+                return 'Not a valid date!';
             }
         }
     };

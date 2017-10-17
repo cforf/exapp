@@ -7,6 +7,8 @@ $(document).ready(function() {
     var $btnAdd = $('#save_data');
     var $showSection = $('#show_data');
     var $formData = $('#form');
+    var $datetip = $('#date_tip');
+    var $numstip = $('#nums_tip');
     var linef = ' ................................ ';
 
     $dateField.val(getFormatDate());
@@ -42,7 +44,6 @@ $(document).ready(function() {
         $numField.attr('class', 'before_input').val('').focus();
         console.info('num field clear!');
     }
-
     $btnAdd.on({
         'mouseenter': function() {
             $(this).css({
@@ -73,20 +74,62 @@ $(document).ready(function() {
     $numField.on('keypress', function() {
         $(this).removeAttr('class');
     });
-    $formData.on('submit', function(e) {
-        //console.info(e.target);
+
+    function submitFormData() {
+
         $.ajax({
-            type: $(this).attr('method'),
-            url: $(this).attr('action'),
-            data: $(this).serialize(),
+            type: $formData.attr('method'),
+            url: $formData.attr('action'),
+            data: $formData.serialize(),
             success: function() {
-                //console.log(os);
                 showData();
             }
         });
 
-        e.preventDefault(); //Prevent the default action(submit)
         clearFields();
-    });
+    }
 
+    //validation form by Validation jquery plugin
+    $formData.validate({
+        debug: true,
+        rules: {
+            date_input: {
+                required: true,
+                maxlength: 10,
+                date: true
+            },
+            number_data: {
+                required: true,
+                number: true,
+                minlength: 6,
+                maxlength: 6,
+                digits: true
+            }
+        },
+        messages: {
+            date_input: {
+                required: "This field is required!",
+                date: "Not a valid date!",
+                maxlength: "Not a valid date! Max 10 symbols"
+            },
+            number_data: {
+                required: "This field is required!",
+                minlength: "Min length - 6 digits",
+                maxlength: "Max length - 6 digits",
+                digits: "Input number by pattern 012345 (6 digits)"
+            }
+        },
+        errorPlacement: function(error, element) {
+            error.addClass('tooltiptext');
+            if (element.is("#date")) {
+                error.appendTo($datetip);
+            } else {
+                error.appendTo($numstip);
+            }
+        },
+        errorElement: "span",
+        submitHandler: function($formData) {
+            submitFormData();
+        }
+    });
 });
