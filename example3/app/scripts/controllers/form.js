@@ -9,21 +9,12 @@
  */
 
 angular.module('example3App').controller('formCtrl', function($scope, $filter) {
-    var stringDate = $filter('date')(new Date(), 'yyyy-MM-dd');
 
-    $scope.saveData.dateData = new Date(stringDate);
-    $scope.clearData = angular.copy($scope.saveData);
-
-    $scope.numData = null;
     $scope.matchPattern = new RegExp('[0-9]{6}');
 
     $scope.addDataForm = function(isvalid) {
         if (isvalid) {
-
             $scope.save();
-            //clear form-->
-            $scope.saveData = angular.copy($scope.clearData);
-
         } else {
             console.log('submit error -> ');
             $scope.showError = true;

@@ -10,8 +10,14 @@
 
 angular.module('example3App').controller('MainCtrl', function($scope, $http, $filter) {
 
+    var stringDate = $filter('date')(new Date(), 'yyyy-MM-dd');
+
     $scope.linef = ' ................................ ';
     $scope.saveData = {};
+    $scope.clearData = {};
+
+    $scope.saveData.dateData = new Date(stringDate);
+    $scope.clearData = angular.copy($scope.saveData);
 
     $scope.query = function() {
         $http({
@@ -29,6 +35,8 @@ angular.module('example3App').controller('MainCtrl', function($scope, $http, $fi
 
     $scope.save = function() {
 
+        console.log('before promise $scope.clearData.numData  = ' + $scope.clearData.numData);
+
         var data = $.param({
             'date_input': $filter('date')($scope.saveData.dateData, 'yyyy-MM-dd'),
             'number_data': $scope.saveData.numData
@@ -38,11 +46,16 @@ angular.module('example3App').controller('MainCtrl', function($scope, $http, $fi
             method: 'POST',
             url: '../../add.php',
             data: data,
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;' }
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+            }
         }).
         then(function(response) {
             $scope.status = response.status;
             $scope.ajaxData = response.data;
+            //clear form-->
+            $scope.saveData = angular.copy($scope.clearData);
+
             $scope.query();
         }, function(response) {
             $scope.ajaxData = response.data || 'Request failed';

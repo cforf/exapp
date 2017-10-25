@@ -83,6 +83,9 @@ $(document).ready(function() {
             data: $formData.serialize(),
             success: function() {
                 showData();
+            },
+            error: function(xhr, status, error) {
+                $showSection.text('Request failed');
             }
         });
 
