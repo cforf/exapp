@@ -14,3 +14,6 @@ Main menu
 
 Working view
 ![screenshot](https://raw.githubusercontent.com/cforf/exapp/master/exapp_screenshot2.png)
+
+[video](https://youtu.be/A938_xFc8es)
+
