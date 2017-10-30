@@ -16,4 +16,5 @@ Working view
 ![screenshot](https://raw.githubusercontent.com/cforf/exapp/master/exapp_screenshot2.png)
 
 [video](https://youtu.be/A938_xFc8es)
+[![YouTube video](http://img.youtube.com/vi/A938_xFc8es/0.jpg)](http://www.youtube.com/watch?v=A938_xFc8es)
 
